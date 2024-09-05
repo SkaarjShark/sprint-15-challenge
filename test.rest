@@ -15,3 +15,7 @@ Content-Type: application/json
     "username": "Captain Marvel",
     "password": "foobar"
 }
+
+###
+
+GET http://localhost:9000/api/jokes
