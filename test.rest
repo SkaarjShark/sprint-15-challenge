@@ -12,10 +12,15 @@ POST http://localhost:9000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "Captain Marvel",
+    "username": "sss",
     "password": "foobar"
 }
 
 ###
 
+GET http://localhost:9000/api/jokes?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkNhcHRhaW4gTWFydmVsIiwiaWF0IjoxNzI1NjU3NjQ2LCJleHAiOjE3MjU3NDQwNDZ9.y0grnCYY_U_PM7m2K_enRcRJPV8FxYiKRxbJkEME9Rw
+
+###
+
 GET http://localhost:9000/api/jokes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IkNhcHRhaW4gTWFydmVsIiwiaWF0IjoxNzI1NjU3NjQ2LCJleHAiOjE3MjU3NDQwNDZ9.y0grnCYY_U_PM7m2K_enRcRJPV8FxYiKRxbJkEME9Rw

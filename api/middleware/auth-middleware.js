@@ -29,7 +29,7 @@ const checkUsernamePass = async (req, res, next) => {
 const validate = (req, res, next) => {
   if (!req.body.username || !req.body.password) {
     res.status(401).json({ status: 401, message: "username and password required" })
-  } 
+  }
 }
 
 
@@ -37,5 +37,5 @@ const validate = (req, res, next) => {
 module.exports = {
     checkUsername,
     checkUsernamePass,
-    validate
+    // validate
 }
