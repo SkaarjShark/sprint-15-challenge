@@ -13,11 +13,11 @@ const { JWT_SECRET } = require('../../config')
       the response body should include a string exactly as follows: "token invalid".
   */
 const restricted = (req, res, next) => {
-  // const token = req.headers.authorization
-  const originalUrl = req.originalUrl
-  const url = new URL(`http://localhost${originalUrl}`);
-  const params = new URLSearchParams(url.search);
-  const token = params.get('authorization');
+  const token = req.headers.authorization
+  // const originalUrl = req.originalUrl
+  // const url = new URL(`http://localhost${originalUrl}`);
+  // const params = new URLSearchParams(url.search);
+  // const token = params.get('authorization');
   console.log(token)
 
   if (token) {
