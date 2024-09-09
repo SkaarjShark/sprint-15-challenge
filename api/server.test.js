@@ -32,10 +32,9 @@ describe('[POST] /register', () => {
       .post('/api/auth/register')
       .send({ username: 'Superman', password: 'foobar' })
 
-    const user = response.body[0]
     expect(response.status).toBe(200)
-    expect(user.username).toBe('Superman')
-    expect(user.password).not.toBe('foobar')
+    expect(response.body.username).toBe('Superman')
+    expect(response.body.password).not.toBe('foobar')
   })
 })
 
