@@ -2,8 +2,8 @@ POST http://localhost:9000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "captain marvel",
-    "password": ""
+    "username": "",
+    "password": "foobar"
 }
 
 ###

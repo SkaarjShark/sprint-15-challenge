@@ -1,6 +1,9 @@
 const Users = require('../auth/auth-model')
 
 const checkUsername = async (req, res, next) => {
+  if ((!req.body.username || req.body.username === "") || !req.body.password) {
+    next({ status: 400, message: "username and password required" })
+  }
     try {
         const [user] = await Users.findBy({ username: req.body.username })
         if (user) {

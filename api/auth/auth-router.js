@@ -9,7 +9,7 @@ const { JWT_SECRET } = require('../../config')
 router.post('/register', checkUsername, async (req, res, next) => {
   let newUser = req.body
   console.log(newUser)
-  if (!newUser.username || !newUser.password) {
+  if ((!newUser.username || newUser.username === "") || !newUser.password) {
     res.status(400).json({ status: 400, message: "username and password required" })
   } else {
     const hash = bcrypt.hashSync(newUser.password, 8) // 2 ^ n
