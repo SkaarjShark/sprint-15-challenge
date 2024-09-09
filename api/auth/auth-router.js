@@ -16,7 +16,7 @@ router.post('/register', checkUsername, async (req, res, next) => {
     newUser.password = hash
     Users.add(newUser)
       .then(result => {
-        res.json(result)
+        res.json(result[0])
       })
       .catch(err => {
         res.json(err)
